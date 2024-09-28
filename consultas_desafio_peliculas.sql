@@ -3,7 +3,7 @@
 
 -- 2. Cargar ambos archivos a su tabla correspondiente.
 --Ingresados desde DBEAVER  en la opción import data
--- se inicia trabajo con la terminal de postgres,
+-- se inicia trabajo con la terminal de postgresSQL,
 -- ajustan las primary key y foreign key con el comando 
 ALTER TABLE peliculas ADD COLUMN id SERIAL PRIMARY KEY;
 ALTER TABLE reparto ADD CONSTRAINT fk_pelicula FOREIGN KEY (id_pelicula) REFERENCES peliculas(id);
