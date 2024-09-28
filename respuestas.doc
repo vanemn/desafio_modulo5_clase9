@@ -224,3 +224,9 @@ desafio_peliculas=# SELECT "Pelicula", CHAR_LENGTH("Pelicula") AS longitud_titul
 (100 filas)
 
 //-- 8. Consultar cual es la longitud más grande entre todos los títulos de las películas.
+
+desafio_peliculas=# SELECT MAX( CHAR_LENGTH("Pelicula")) AS max_longitud_titulo FROM peliculas;
+ max_longitud_titulo
+---------------------
+                  52
+(1 fila)
