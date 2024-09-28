@@ -1,5 +1,5 @@
 
-CONECTADA A BASE DE DATOS Y REVISION DE TIPOS DE DATOS EN TABLAS
+Conectada a la base de datos se revisan los tipos de datos y sus tablas
 
 desafio_peliculas=# \d
          Listado de relaciones
@@ -36,7 +36,16 @@ desafio_peliculas=# \d peliculas
 ═ndices:
     "peliculas_pkey" PRIMARY KEY, btree (id)
 
+esafio_peliculas=# \d reparto
+                           Tabla ½public.reparto╗
+   Columna   |         Tipo          | Ordenamiento | Nulable | Por omisi¾n
+-------------+-----------------------+--------------+---------+-------------
+ id_pelicula | integer               |              |         |
+ actor       | character varying(50) |              |         |
+Restricciones de llave forßnea:
+    "fk_pelicula" FOREIGN KEY (id_pelicula) REFERENCES peliculas(id)
 
+    
 //--3. Obtener el ID de la película “Titanic”.
 
 desafio_peliculas=# SELECT id FROM peliculas WHERE "Pelicula"= 'Titanic';
